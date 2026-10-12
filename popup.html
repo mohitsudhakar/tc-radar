@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font: 13px/1.5 -apple-system, sans-serif; width: 320px; padding: 12px; margin: 0; color: #1a1a1a; }
+    h1 { font-size: 15px; margin: 0 0 8px; }
+    button { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; background: #175cd3; color: #fff; cursor: pointer; margin-top: 6px; }
+    button.secondary { background: #fff; color: #175cd3; }
+    #status { margin-top: 8px; font-size: 12px; color: #555; white-space: pre-wrap; }
+
+    .verdict { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; padding: 8px 10px; border-radius: 6px; font-weight: 700; }
+    .verdict.low { background: #ecfdf3; color: #067647; }
+    .verdict.medium { background: #fffaeb; color: #b54708; }
+    .verdict.high { background: #fef3f2; color: #b42318; }
+    .score { font-variant-numeric: tabular-nums; }
+
+    .track { height: 6px; background: #eee; border-radius: 3px; margin: 6px 0 10px; }
+    .fill { height: 100%; border-radius: 3px; }
+    .fill.low { background: #12b76a; }
+    .fill.medium { background: #f79009; }
+    .fill.high { background: #d92d20; }
+
+    .summary { margin: 6px 0; color: #333; }
+    .section { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #555; margin: 12px 0 4px; }
+
+    .cat { border: 1px solid #eee; border-radius: 6px; margin: 4px 0; padding: 6px 8px; }
+    .cat summary { display: flex; justify-content: space-between; cursor: pointer; font-weight: 600; list-style: none; }
+    .cat summary::-webkit-details-marker { display: none; }
+    .cat summary::before { content: "▸ "; color: #999; }
+    .cat[open] summary::before { content: "▾ "; }
+    .pts { color: #b54708; }
+
+    .quote { font-size: 11px; color: #666; font-style: italic; border-left: 2px solid #ddd; padding: 3px 8px; margin: 6px 0 0 4px; }
+
+    .flag { padding: 6px 0; border-top: 1px dashed #eee; }
+    .flag .detail { color: #555; }
+  </style>
+</head>
+<body>
+  <h1>⚖️ T&C Radar</h1>
+  <button id="scan">Scan this page</button>
+  <button id="options" class="secondary">Settings (API key)</button>
+  <div id="status"></div>
+  <div id="results"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
